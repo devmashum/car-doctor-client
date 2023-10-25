@@ -4,8 +4,10 @@ import logo from "../../assets/images/logo.svg";
 const NavBar = () => {
     const navItems = <>
 
-        <NavLink to={'/'}>Home</NavLink>
-        <NavLink to={'/about'}>About</NavLink>
+        <NavLink to={'/'}> <li className='mr-3 text-2xl'>Home</li> </NavLink>
+
+        <NavLink to={'/login'}> <li className='mr-3 text-2xl'>Login</li> </NavLink>
+        <NavLink to={'/signup'}> <li className='text-2xl'>SignUp</li> </NavLink>
 
 
     </>
