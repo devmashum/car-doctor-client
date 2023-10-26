@@ -19,6 +19,7 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
 
     }
+    // current userke dhore rakhe
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
