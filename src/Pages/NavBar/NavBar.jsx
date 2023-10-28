@@ -18,7 +18,7 @@ const NavBar = () => {
         <NavLink to={'/'}> <li className='mr-3 text-2xl'>Home</li> </NavLink>
 
         {user?.email ? <>
-            <NavLink to={'booking'}><li onClick={handleLogOut} className='mr-3 text-2xl' >My Booking</li></NavLink>
+            <NavLink to={'bookings'}><li className='mr-3 text-2xl' >My Booking</li></NavLink>
             <NavLink><li onClick={handleLogOut} className='mr-3 text-2xl' >Log Out</li></NavLink>
         </> :
             <NavLink to={'/login'}> <li className='mr-3 text-2xl'>Login</li> </NavLink>}
