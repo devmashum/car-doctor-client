@@ -1,7 +1,7 @@
 import React from 'react';
 
-const BookingRow = ({ bookings, handleDelete }) => {
-    const { customerName, price, date, email, service, img, _id } = bookings;
+const BookingRow = ({ bookings, handleDelete, handleBookingConfirm }) => {
+    const { customerName, price, date, email, service, img, _id, status } = bookings;
 
 
     return (
@@ -32,9 +32,10 @@ const BookingRow = ({ bookings, handleDelete }) => {
             <td>{!email && 'No email found' || email && email}</td>
             <td>${price}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                {
+                    status === 'confirm' ? <span className='font-bold text-primary btn btn-ghost'>Confirmed</span> : < button onClick={() => handleBookingConfirm(_id)} className="btn btn-ghost btn-xs">Please Confirm</button>}
             </th>
-        </tr>
+        </tr >
     );
 };
 
