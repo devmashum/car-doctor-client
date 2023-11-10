@@ -3,6 +3,9 @@ import ServiceCard from './ServiceCard';
 
 const Services = () => {
 
+    // to show the low price first 
+
+
     const [Services, setServices] = useState([]);
 
     useEffect(() => {
@@ -19,6 +22,7 @@ const Services = () => {
                 <h3 className="text-2xl font-bold text-orange-600">Service</h3>
                 <h3 className="text-4xl ">Our Service Area</h3>
                 <p>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                <button className='btn btn-secondary'>Price low to high</button>
             </div>
             <div className='grid lg:grid-cols-3 gap-5'>
                 {
