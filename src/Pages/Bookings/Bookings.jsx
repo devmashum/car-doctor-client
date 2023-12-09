@@ -19,6 +19,8 @@ const Bookings = () => {
         // fetch(url)
         //     .then(res => res.json())
         //     .then(data => setBooking(data))
+
+        return <Bookings bookings={booking}/>
     }, [url]);
 
     const handleDelete = id => {

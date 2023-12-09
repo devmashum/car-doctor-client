@@ -2,10 +2,12 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/images/logo.svg";
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { MdOutlineAddShoppingCart } from "react-icons/md";
 
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
+    
 
     const handleLogOut = () => {
         logOut()
@@ -15,13 +17,16 @@ const NavBar = () => {
 
     const navItems = <>
 
-        <NavLink to={'/'}> <li className='mr-3 text-2xl'>Home</li> </NavLink>
+        <NavLink to={'/'}> <li className='mr-3 text-[18px] font-semibold'>Home</li> </NavLink>
+        <NavLink to={'/services'}> <li className='mr-3 text-[18px] font-semibold'>Services</li> </NavLink>
+        <NavLink to={'/blog'}> <li className='mr-3 text-[18px] font-semibold'>Blog</li> </NavLink>
+        <NavLink to={'/blog'}> <li className='mr-3 text-[18px] font-semibold'>Contact</li> </NavLink>
 
         {user?.email ? <>
-            <NavLink to={'bookings'}><li className='mr-3 text-2xl' >My Booking</li></NavLink>
-            <NavLink><li onClick={handleLogOut} className='mr-3 text-2xl' >Log Out</li></NavLink>
+            <NavLink to={'bookings'}><li className='mr-3 text-[18px] font-semibold' >My Booking</li></NavLink>
+            <NavLink><li onClick={handleLogOut} className='mr-3 text-[18px] font-semibold' >Log Out</li></NavLink>
         </> :
-            <NavLink to={'/login'}> <li className='mr-3 text-2xl'>Login</li> </NavLink>}
+            <NavLink to={'/login'}> <li className='mr-3 text-[18px] font-semibold'>Login</li> </NavLink>}
 
 
 
@@ -46,7 +51,13 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className='btn btn-warning btn-outline'>Appoinment</button>
+            <div className='text-2xl font-bold mr-5'><MdOutlineAddShoppingCart /></div>
+            <div className='mr-5 text-[18px] font-semibold'>
+                {
+                    user? <h3>Logout</h3> : <h3>Login</h3>
+                }
+            </div>
+                <button className='btn btn-outline text-[18px] font-bold text-[#FF3811]'>Appoinment</button>
             </div>
         </div>
     );
