@@ -27,10 +27,10 @@ const Services = () => {
   }, [asc]);
 
   return (
-    <div className='lg:ml-0 ml-10'>
+    <div className='lg:ml-0 ml-10 mt-[30px] lg:mt-[80px]'>
       <div className='lg:text-center'>
         <p className='text-[#FF3811] text-xl font-bold mt-5 '>Service</p>
-        <h3 className="text-[45px] text-[#151515] font-bold">Our Service Area</h3>
+        <h3 className="lg:text-[45px] text-2xl text-[#151515] font-bold my-3">Our Service Area</h3>
         <p className='text-[16px] text-[#737373] md-[50px]'>
           Keep your vehicle in peak condition with our routine maintenance services. From oil changes and fluid checks to tire rotations and brake inspections, our skilled technicians perform thorough assessments to prevent potential issues and extend the life of your vehicle.
         </p>
