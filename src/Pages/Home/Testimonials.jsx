@@ -1,3 +1,7 @@
+import customer1 from '../../assets/images/Testimonials/member1.png'
+import customer2 from '../../assets/images/Testimonials/member2.png'
+import customer3 from '../../assets/images/Testimonials/member3.png'
+import customer4 from '../../assets/images/Testimonials/member4.png'
 const Testimonials = () => {
     return (
         <div>
@@ -18,7 +22,7 @@ const Testimonials = () => {
         <div>
         <div className="avatar">
   <div className="w-24 rounded-full">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src={customer2} />
   </div>
 </div>
         </div>
@@ -47,7 +51,7 @@ const Testimonials = () => {
         <div>
         <div className="avatar">
   <div className="w-24 rounded-full">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src={customer1} />
   </div>
 </div>
         </div>
@@ -76,7 +80,7 @@ const Testimonials = () => {
         <div>
         <div className="avatar">
   <div className="w-24 rounded-full">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src={customer3} />
   </div>
 </div>
         </div>
@@ -105,12 +109,12 @@ const Testimonials = () => {
         <div>
         <div className="avatar">
   <div className="w-24 rounded-full">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src={customer4} />
   </div>
 </div>
         </div>
         <div>
-            <div className="text-[25px] font-bold">Marcus Turner</div>
+            <div className="text-[25px] font-bold">Regina Zimmer</div>
             <hr/>
             <div className="font-semibold text-xl">Financial Analyst</div>
         </div>

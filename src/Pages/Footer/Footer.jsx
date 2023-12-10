@@ -1,29 +1,33 @@
 import React from 'react';
 import logo from '../../assets/images/logo.svg'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content mt-20">
-            <img src={logo} alt="" />
+        <footer className="footer p-10 bg-[#151515]  text-white mt-20">
+            <Link to={'/'}><img className='bg-white p-5 rounded-xl' src={logo} alt="" /></Link>
+         
             <nav>
-                <header className="footer-title">Services</header>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
-                <a className="link link-hover">Marketing</a>
-                <a className="link link-hover">Advertisement</a>
+                <header className="footer-title">Location</header>
+             <h3 className='text-base'>
+             Car Doctor <br />
+             321 Design Plaza <br />
+             Los Angeles, CA 90001
+             </h3>
             </nav>
             <nav>
-                <header className="footer-title">Company</header>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Jobs</a>
-                <a className="link link-hover">Press kit</a>
+                <header className="footer-title">Contact Details</header>
+                <h3 className='text-base'>
+                Telefon: +41 22 800 935 833 <br />
+                Fax: +41 22 2244506-10 <br />
+                E-Mail: mail@acar-doctor.com
+             </h3>
             </nav>
             <nav>
                 <header className="footer-title">Legal</header>
-                <a className="link link-hover">Terms of use</a>
-                <a className="link link-hover">Privacy policy</a>
-                <a className="link link-hover">Cookie policy</a>
+                <a className="link link-hover" href='/'>Terms of use</a>
+                <a className="link link-hover" href='/'>Privacy policy</a>
+                <a className="link link-hover" href='/'>Cookie policy</a>
             </nav>
         </footer>
     );
