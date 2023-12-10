@@ -54,7 +54,7 @@ const NavBar = () => {
             <div className='text-2xl font-bold mr-5'><MdOutlineAddShoppingCart /></div>
             <div className='mr-5 text-[18px] font-semibold'>
                 {
-                    user? <h3>Logout</h3> : <h3>Login</h3>
+                    user? <button onClick={handleLogOut}>Logout</button>: <Link to={'/login'}>Login</Link>
                 }
             </div>
                 <button className='btn btn-outline text-[18px] font-bold text-[#FF3811]'>Appoinment</button>

@@ -3,6 +3,7 @@ import img from '../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -26,6 +27,14 @@ const Login = () => {
                         console.log(res.data)
                         if (res.data.success) { navigate(location?.state ? location?.state : '/') }
                     })
+
+                    // 
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "You logged in successfully",
+                        icon: "success"
+                      });
+                    // 
 
             })
             .catch(error => console.log(error));
