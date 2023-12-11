@@ -8,7 +8,7 @@ const Bookings = () => {
 
     const { user } = useContext(AuthContext);
     const [booking, setBooking] = useState([]);
-    const url = `http://localhost:3000/booking?email=${user?.email}`;
+    const url = `https://car-doctor-server-chi-seven.vercel.app/booking?email=${user?.email}`;
 
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Bookings = () => {
 
     const handleDelete = (id) => {
        
-            fetch(`http://localhost:3000/booking/${id}`, {
+            fetch(`https://car-doctor-server-chi-seven.vercel.app/booking/${id}`, {
                 method: 'DELETE'
             })
             .then((res) => res.json())
@@ -61,7 +61,7 @@ const Bookings = () => {
         
     
     const handleBookingConfirm = id => {
-        fetch(`http://localhost:3000/booking/${id}`, {
+        fetch(`https://car-doctor-server-chi-seven.vercel.app/booking/${id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ status: 'confirm' })
@@ -85,17 +85,14 @@ const Bookings = () => {
 
     return (
         <div>
-            <h2>Your Booking: {booking.length}</h2>
-
+          
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
                     <thead>
                         <tr>
                             <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
+                              Delete
                             </th>
                             <th>Service</th>
                             <th>Customer Name</th>

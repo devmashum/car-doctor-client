@@ -34,7 +34,7 @@ const BookService = () => {
 
       
         // Send booking request to server
-        fetch("http://localhost:3000/booking", {
+        fetch("https://car-doctor-server-chi-seven.vercel.app/booking", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
