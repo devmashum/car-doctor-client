@@ -3,12 +3,13 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import BookingRow from './BookingRow';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import img from '../../assets/images/banner/3.jpg'
 
 const Bookings = () => {
 
     const { user } = useContext(AuthContext);
     const [booking, setBooking] = useState([]);
-    const url = `https://car-doctor-server-chi-seven.vercel.app/booking?email=${user?.email}`;
+    const url = `http://localhost:3000/booking?email=${user?.email}`;
 
 
     useEffect(() => {
@@ -24,7 +25,7 @@ const Bookings = () => {
 
     const handleDelete = (id) => {
        
-            fetch(`https://car-doctor-server-chi-seven.vercel.app/booking/${id}`, {
+            fetch(`http://localhost:3000/booking/${id}`, {
                 method: 'DELETE'
             })
             .then((res) => res.json())
@@ -61,7 +62,7 @@ const Bookings = () => {
         
     
     const handleBookingConfirm = id => {
-        fetch(`https://car-doctor-server-chi-seven.vercel.app/booking/${id}`, {
+        fetch(`http://localhost:3000/booking/${id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ status: 'confirm' })
@@ -85,7 +86,10 @@ const Bookings = () => {
 
     return (
         <div>
-          
+        <h3 className="absolute m-20 text-white text-4xl lg:text-6xl font-bold">
+                    My Booking
+                </h3>
+           <img className='w-full h-[300px] object-cover rounded-xl lg:mb-10' src={img} alt="" />
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

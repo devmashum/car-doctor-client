@@ -15,7 +15,7 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch(`https://car-doctor-server-chi-seven.vercel.app/services?sort=${asc ? 'asc' : 'desc'}`);
+        const response = await fetch(`http://localhost:3000/services?sort=${asc ? 'asc' : 'desc'}`);
         const data = await response.json();
         setServices(data);
       } catch (error) {
@@ -27,11 +27,11 @@ const Services = () => {
   }, [asc]);
 
   return (
-    <div className='lg:ml-0 ml-10 mt-[30px] lg:mt-[80px]'>
+    <div className='lg:ml-0  mt-[30px] lg:mt-[80px]'>
       <div className='lg:text-center'>
-        <p className='text-[#FF3811] text-xl font-bold mt-5 '>Service</p>
-        <h3 className="lg:text-[45px] text-2xl text-[#151515] font-bold my-3">Our Service Area</h3>
-        <p className='text-[16px] text-[#737373] mb-[50px]'>
+        <p className='text-[#FF3811] text-xl font-bold mt-5 ml-10 '>Service</p>
+        <h3 className="lg:text-[45px] text-2xl text-[#151515] font-bold my-3 ml-10">Our Service Area</h3>
+        <p className='text-[16px] text-[#737373] mb-[50px] ml-10'>
           Keep your vehicle in peak condition with our routine maintenance services. From oil changes and fluid checks to tire rotations and brake inspections, our skilled technicians perform thorough assessments to prevent potential issues and extend the life of your vehicle.
         </p>
 

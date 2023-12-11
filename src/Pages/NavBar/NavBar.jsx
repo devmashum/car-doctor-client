@@ -20,13 +20,18 @@ const NavBar = () => {
         <NavLink to={'/'}> <li className='mr-3 text-[18px] font-semibold'>Home</li> </NavLink>
         <NavLink to={'/services'}> <li className='mr-3 text-[18px] font-semibold'>Services</li> </NavLink>
         <NavLink to={'/blog'}> <li className='mr-3 text-[18px] font-semibold'>Blog</li> </NavLink>
-        <NavLink to={'/blog'}> <li className='mr-3 text-[18px] font-semibold'>Contact</li> </NavLink>
+        <NavLink to={'/contact'}> <li className='mr-3 text-[18px] font-semibold'>Contact</li> </NavLink>
 
         {user?.email ? <>
             <NavLink to={'bookings'}><li className='mr-3 text-[18px] font-semibold' >My Booking</li></NavLink>
-            <NavLink><li onClick={handleLogOut} className='mr-3 text-[18px] font-semibold' >Log Out</li></NavLink>
+          
         </> :
-            <NavLink to={'/login'}> <li className='mr-3 text-[18px] font-semibold'>Login</li> </NavLink>}
+            <></>}
+                        <div className='mr-5 text-[18px] font-semibold'>
+                {
+                    user? <button onClick={handleLogOut}>Logout</button>: <Link to={'/login'}>Login</Link>
+                }
+            </div>
 
 
 
@@ -52,11 +57,6 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
             <div className='text-2xl font-bold mr-5'><MdOutlineAddShoppingCart /></div>
-            <div className='mr-5 text-[18px] font-semibold'>
-                {
-                    user? <button onClick={handleLogOut}>Logout</button>: <Link to={'/login'}>Login</Link>
-                }
-            </div>
                 <button className='btn btn-outline text-[18px] font-bold text-[#FF3811]'>Appoinment</button>
             </div>
         </div>

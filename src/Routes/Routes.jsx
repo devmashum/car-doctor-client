@@ -7,6 +7,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import BookService from "../Pages/BookService";
 import Bookings from "../Pages/Bookings/Bookings";
 import PrivateRoute from "./PrivateRoute";
+import Contact from "../Pages/Contact/Contact";
 
 
 const router = createBrowserRouter([
@@ -30,11 +31,15 @@ const router = createBrowserRouter([
             {
                 path: '/book/:id',
                 element: <PrivateRoute><BookService></BookService></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://car-doctor-server-chi-seven.vercel.app/services/${params.id}`),
+                loader: ({ params }) => fetch(`http://localhost:3000/services/${params.id}`),
             },
             {
                 path: '/bookings',
                 element: <Bookings></Bookings>
+            },
+            {
+                path:'/contact',
+                element: <Contact></Contact>
             }
 
         ]

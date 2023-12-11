@@ -57,10 +57,10 @@ const Team = () => {
 </div>
         </div>
        </div>
-       <div className='lg:text-center lg:ml-0 ml-10 mt-[30px] lg:mt-[80px]'>
-        <p className='text-[#FF3811] text-xl font-bold mt-5 '>Core Features</p>
-        <h3 className="lg:text-[45px] text-2xl text-[#151515] font-bold my-3">Why Choose Us</h3>
-        <p className='text-[16px] text-[#737373] mb-[50px]'>
+       <div className='lg:text-center lg:ml-10 mt-[30px] lg:mt-[80px]'>
+        <p className='text-[#FF3811] text-xl font-bold mt-5 ml-10'>Core Features</p>
+        <h3 className="lg:text-[45px] text-2xl text-[#151515] font-bold my-3 ml-10">Why Choose Us</h3>
+        <p className='text-[16px] text-[#737373] mb-[50px] ml-10'>
         We understand the importance of clear and open communication. That's why we keep our clients informed every step of the way. From diagnostics to the final repair, you'll be in the loop, ensuring there are no surprises when you get back behind the wheel.
         </p>
         <div className=' w-11/12  mx-auto  lg:flex justify-center gap-16'>
