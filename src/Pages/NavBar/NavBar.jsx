@@ -3,10 +3,12 @@ import logo from "../../assets/images/logo.svg";
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import useCart from '../../hooks/useCart';
 
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [cart] = useCart();
     
 
     const handleLogOut = () => {
@@ -55,9 +57,15 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <div className='text-2xl font-bold mr-5'><MdOutlineAddShoppingCart /></div>
+           <Link to={'/myCart'}> <div className='flex justify-center item-center mr-2 lg:mr-5'>
+            <div className='text-3xl font-bold mr-1'>
+            <MdOutlineAddShoppingCart />
+            </div>
+            <button className='btn btn-sm text-white bg-[#FF3811] hover:bg-[#FF3811]'>{cart.length}</button>
+            </div></Link>
+         
             {
-                    user? <button className='mr-5 text-[18px] font-semibold lg:block hidden' onClick={handleLogOut}>Logout</button>: <Link to={'/login'}>Login</Link>
+                    user? <button className='mr-5 text-[18px] font-semibold lg:block hidden' onClick={handleLogOut}>Logout</button>: <Link className='text-[18px] font-semibold mr-5' to={'/login'}>Login</Link>
                 }
                 <button className='btn btn-outline text-[18px] font-bold text-[#FF3811]'>Appoinment</button>
             </div>

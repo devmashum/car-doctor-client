@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Spark Plugs",
+      "price": 12.99,
+      "details": "High-performance spark plugs.",
+      "img": "https://raw.githubusercontent.com/devmashum/car-doctor-client/main/src/assets/images/products/6.png"
+    },
+    {
+      "name": "Air Filter",
+      "price": 19.99,
+      "details": "Premium air filter.",
+      "img": "https://raw.githubusercontent.com/devmashum/car-doctor-client/main/src/assets/images/products/5.png"
+    },
+    {
+      "name": "Brake Pads",
+      "price": 39.99,
+      "details": "Durable brake pads.",
+      "img": "https://raw.githubusercontent.com/devmashum/car-doctor-client/main/src/assets/images/products/1.png"
+    },
+    {
+      "name": "Oil Filter",
+      "price": 8.99,
+      "details": "Efficient oil filter.",
+      "img": "https://raw.githubusercontent.com/devmashum/car-doctor-client/main/src/assets/images/products/4.png"
+    },
+    {
+      "name": "Radiator Coolant",
+      "price": 14.99,
+      "details": "High-quality coolant.",
+      "img": "https://raw.githubusercontent.com/devmashum/car-doctor-client/main/src/assets/images/products/3.png"
+    },
+    {
+      "name": "Wiper Blades",
+      "price": 16.99,
+      "details": "All-weather wiper blades.",
+      "img": "https://raw.githubusercontent.com/devmashum/car-doctor-client/main/src/assets/images/products/2.png"
+    }
+  ]
+  
