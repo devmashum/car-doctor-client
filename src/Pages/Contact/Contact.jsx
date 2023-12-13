@@ -1,7 +1,10 @@
 import Swal from 'sweetalert2';
 import img from '../../assets/images/banner/6.jpg'
 import contact from '../../assets/images/contact.png'
+import useAxios from '../../hooks/useAxios';
+
 const Contact = () => {
+  const axiosPublic = useAxios();
 
    const handleContact=event=>{
     event.preventDefault();
@@ -12,30 +15,25 @@ const Contact = () => {
 
     console.log(name, email, message);
 
-    const contact={
+    const contactData={
 name: name,
 email:email,
 message:message
-    };
+    }
 
-    fetch("http://localhost:3000/contact", {
-        method: "POST",
-        headers: {
-            "content-type": "application/json",
-        },
-        body: JSON.stringify(contact),
-    })
-        .then((res) => res.json())
-        
-        .then((data) => {
-            console.log(data);
-        });
-        Swal.fire({
-            title: "Great!",
-            text: "Thanks for booking a service",
-            icon: "success"
-          });
-
+    axiosPublic.post('/contact', contactData)
+    .then(res => {
+      console.log(res.data)
+      alert('data stored in database')
+      Swal.fire({
+        title: "Good job!",
+        text: "You clicked the button!",
+        icon: "success"
+      });
+  })
+  .catch(error => {
+      console.log(error)
+  })
 };
 
  

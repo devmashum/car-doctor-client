@@ -18,8 +18,7 @@ const NavBar = () => {
     const navItems = <>
 
         <NavLink to={'/'}> <li className='mr-3 text-[18px] font-semibold'>Home</li> </NavLink>
-        <NavLink to={'/services'}> <li className='mr-3 text-[18px] font-semibold'>Services</li> </NavLink>
-        <NavLink to={'/blog'}> <li className='mr-3 text-[18px] font-semibold'>Blog</li> </NavLink>
+        <NavLink to={'/shop'}> <li className='mr-3 text-[18px] font-semibold'>Shop</li> </NavLink>
         <NavLink to={'/contact'}> <li className='mr-3 text-[18px] font-semibold'>Contact</li> </NavLink>
 
         {user?.email ? <>
@@ -27,7 +26,7 @@ const NavBar = () => {
           
         </> :
             <></>}
-                        <div className='mr-5 text-[18px] font-semibold'>
+                        <div className='mr-5 text-[18px] font-semibold lg:hidden'>
                 {
                     user? <button onClick={handleLogOut}>Logout</button>: <Link to={'/login'}>Login</Link>
                 }
@@ -57,6 +56,9 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
             <div className='text-2xl font-bold mr-5'><MdOutlineAddShoppingCart /></div>
+            {
+                    user? <button className='mr-5 text-[18px] font-semibold lg:block hidden' onClick={handleLogOut}>Logout</button>: <Link to={'/login'}>Login</Link>
+                }
                 <button className='btn btn-outline text-[18px] font-bold text-[#FF3811]'>Appoinment</button>
             </div>
         </div>
