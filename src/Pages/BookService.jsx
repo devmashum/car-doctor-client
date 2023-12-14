@@ -1,61 +1,40 @@
-import React, { useContext } from "react";
+
 import { useLoaderData } from "react-router-dom";
-import { AuthContext } from "../AuthProvider/AuthProvider";
-import Swal from "sweetalert2";
+import useAuth from "../hooks/useAuth";
 
 const BookService = () => {
-    // Fetch service details
-    const service = useLoaderData();
-    const { price, title, img, _id } = service;
+ const service= useLoaderData();
+ const {user} =useAuth();
+
+ const {img, price, title}=service;
 
     // Get user information from AuthContext
-    const { user } = useContext(AuthContext);
-
     // Handle booking submission
-    const handleBookService = (event) => {
-        event.preventDefault();
+    // const handleBookService = (event) => {
+    //     event.preventDefault();
 
-        // Gather form data
-        const form = event.target;
-        const name = form.name.value;
-        const date = form.date.value;
-        const email = user?.email;
+    //     // Gather form data
+    //     const form = event.target;
+    //     const name = form.name.value;
+    //     const date = form.date.value;
+    //     const email = user?.email;
 
-        // Prepare booking object
-        const booking = {
-            customerName: name,
-            img,
-            email,
-            date,
-            service: title,
-            service_id: _id,
-            price: price,
-        };
+    //     // Prepare booking object
+    //     const booking = {
+    //         customerName: name,
+    //         img,
+    //         email,
+    //         date,
+    //         service: title,
+    //         service_id: _id,
+    //         price: price,
+    //     };
 
-      
-        // Send booking request to server
-        fetch("http://localhost:3000/booking", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(booking),
-        })
-            .then((res) => res.json())
-            
-            .then((data) => {
-                console.log(data);
-            });
-            Swal.fire({
-                title: "Great!",
-                text: "Thanks for booking a service",
-                icon: "success"
-              });
-
-    };
+    // };
 
     return (
         <>
+           
             <div>
                 <h3 className="absolute m-20 text-white text-4xl lg:text-6xl font-bold">
                     Book a service
@@ -69,16 +48,15 @@ const BookService = () => {
 
             <div>
                 <div className="lg:mt-[142px] bg-[#F3F3F3] p-10 rounded-xl">
-                    <form onSubmit={handleBookService} className="card-body">
+                    <form  className="card-body">
                         <div className="grid lg:grid-cols-2 gap-4">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text">Service Name</span>
                                 </label>
                                 <input
                                     type="text"
-                                    placeholder="Name"
-                                    defaultValue={user?.displayName}
+                                    defaultValue={title}
                                     name="name"
                                     className="input input-bordered"
                                     required
@@ -120,10 +98,21 @@ const BookService = () => {
                                     required
                                 />
                             </div>
+                           
                         </div>
+                        <div className="form-control ">
+                                <label className="label">
+                                    <span className="label-text">Message</span>
+                                </label>
+                               <textarea
+                               placeholder="Your message (optional)"
+                               className="p-5"
+                               type='text-area'
+                               ></textarea>
+                            </div>
                         <div className="form-control mt-6">
                             <input
-                                className="btn btn-block bg-[#FF3811] text-white"
+                                className="btn btn-block hover:bg-slate-500 bg-[#FF3811] text-white"
                                 type="submit"
                                 value="Order Confirm"
                             />

@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -8,8 +8,8 @@ import Swal from 'sweetalert2';
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
-    const location = useLocation();
-    const navigate = useNavigate();
+      const navigate = useNavigate();
+   
     console.log(location);
 
     const handleLogin = event => {
@@ -25,9 +25,8 @@ const Login = () => {
                 axios.post('http://localhost:3000/jwt', user, { withCredentials: true })
                     .then(res => {
                         console.log(res.data)
-                        if (res.data.success) { navigate(location?.state ? location?.state : '/') }
-                    })
-
+                                            })
+                    navigate('/');
                     // 
                     Swal.fire({
                         title: "Good job!",
@@ -43,11 +42,11 @@ const Login = () => {
     return (
         <div className="hero min-h-screen bg-base-200  ">
             <div className="hero-content">
-                <div className=" w-1/2 mr-12">
+                <div className=" lg:w-1/2 lg:mr-12">
 
-                    <img src={img} alt="" />
+                    <img className='lg:block hidden' src={img} alt="" />
                 </div>
-                <div className="card-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100 p-5 rounded-xl">
+                <div className="card-shrink-0 lg:w-1/2 max-w-sm shadow-2xl bg-base-100 p-5 rounded-xl">
                     <h1 className="text-3xl font-bold p-5 text-center">Login now!</h1>
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
@@ -69,7 +68,7 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
 
-                            <input className='btn btn-primary' type="submit" value="Login" />
+                          <input className='btn btn-primary' type="submit" value="Login" /> 
                         </div>
                     </form>
                     <p className='text-center'>New to Car Doctors <Link className='text-orange-700 text-xl font-bold' to={'/signup'} >Sign Up</Link></p>

@@ -2,6 +2,7 @@ import React from 'react';
 import useAxios from '../../hooks/useAxios';
 import useAuth from '../../hooks/useAuth';
 import useCart from '../../hooks/useCart';
+import Swal from 'sweetalert2';
 
 const ShopCard = ({items}) => {
     const {img,name,price, details}=items;
@@ -21,12 +22,15 @@ const ShopCard = ({items}) => {
         axiosSecure.post('/cart', items)
         .then(res=>{
             console.log(res.data);
-            
-        })
+            })
+            Swal.fire({
+                title: "Item added to the cart!",
+                icon: "success"
+              })
         refetch();
-
-
     }
+
+    
     return (
         <div>
             <div className="card  bg-base-100 shadow-xl mb-5">

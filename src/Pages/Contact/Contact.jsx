@@ -24,12 +24,12 @@ message:message
     axiosPublic.post('/contact', contactData)
     .then(res => {
       console.log(res.data)
-      alert('data stored in database')
-      Swal.fire({
-        title: "Good job!",
-        text: "You clicked the button!",
-        icon: "success"
-      });
+      
+  })
+  Swal.fire({
+    title: "Thanks!",
+    text: "We will contact you soon!",
+    icon: "success"
   })
   .catch(error => {
       console.log(error)
