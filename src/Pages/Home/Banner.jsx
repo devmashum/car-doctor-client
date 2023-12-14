@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import img2 from '../../assets/images/banner/2.jpg'
 import img3 from '../../assets/images/banner/3.jpg'
 import img4 from '../../assets/images/banner/4.jpg'
@@ -20,8 +21,8 @@ const Banner = () => {
       <h1 className=" text-4xl lg:ml-[100px] lg:text-5xl font-extrabold text-white leading-snug ">Affordable <br /> Price For Car Servicing</h1>
       <p className="lg:ml-[100px] text-[18px] text-white mt-[30px] lg:leading-none">There are many variations of passages of  available, but <span className='hidden lg:block'> <br /> </span> the majority have suffered alteration in some form</p>
     <div className='flex mt-[30px]'>
-    <button className="btn lg:ml-[100px] bg-[#FF3811] text-white">Shop</button>
-      <button className="btn btn-outline text-white ml-[45px]">Our Services</button>
+    <Link to={'/shop'}><button className="btn lg:ml-[100px] bg-[#FF3811] hover:bg-slate-500 text-white">Shop</button></Link>
+      <Link to={'/services'}><button className="btn btn-outline text-white ml-[45px]">Our Services</button></Link>
     </div>
     </div>
   </div>

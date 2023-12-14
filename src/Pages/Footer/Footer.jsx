@@ -24,10 +24,10 @@ const Footer = () => {
              </h3>
             </nav>
             <nav>
-                <header className="footer-title">Legal</header>
-                <a className="link link-hover" href='/'>Terms of use</a>
-                <a className="link link-hover" href='/'>Privacy policy</a>
-                <a className="link link-hover" href='/'>Cookie policy</a>
+                <header className="footer-title ">Legal</header>
+                <a className="link link-hover text-base" href='/'>Terms of use</a>
+                <a className="link link-hover text-base" href='/'>Privacy policy</a>
+                <a className="link link-hover text-base" href='/'>Cookie policy</a>
             </nav>
         </footer>
     );

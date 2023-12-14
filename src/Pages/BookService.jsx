@@ -1,36 +1,51 @@
 
 import { useLoaderData } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import useAxios from "../hooks/useAxios";
+import MyCart from "./MyCart/MyCart";
+import useCart from "../hooks/useCart";
+import Swal from "sweetalert2";
 
 const BookService = () => {
  const service= useLoaderData();
  const {user} =useAuth();
+ const axiosPublic = useAxios();
+ const[,refetch] = useCart();
 
- const {img, price, title}=service;
+ const {img, price, title, _id}=service;
 
     // Get user information from AuthContext
     // Handle booking submission
-    // const handleBookService = (event) => {
-    //     event.preventDefault();
+    const handleBookService = (event) => {
+        event.preventDefault();
 
-    //     // Gather form data
-    //     const form = event.target;
-    //     const name = form.name.value;
-    //     const date = form.date.value;
-    //     const email = user?.email;
+        // Gather form data
+        const form = event.target;
+        const serviceName = form.serviceName.value;
+        const date = form.date.value;
+        const email = user?.email;
+        const message = form.message.value;
 
-    //     // Prepare booking object
-    //     const booking = {
-    //         customerName: name,
-    //         img,
-    //         email,
-    //         date,
-    //         service: title,
-    //         service_id: _id,
-    //         price: price,
-    //     };
+        // Prepare booking object
+        const booking = {
+            serviceName,
+            img,
+            email,
+            date,
+            message,
+            service_id: _id,
+            price: parseFloat(price),
+        };
+      
+axiosPublic.post('/booking', booking)
+.then (res=>console.log(res.data))
+Swal.fire({
+    title: "Booking sent to Car Doctor!",
+    icon: "success"
+  })
+refetch();
 
-    // };
+    };
 
     return (
         <>
@@ -48,7 +63,7 @@ const BookService = () => {
 
             <div>
                 <div className="lg:mt-[142px] bg-[#F3F3F3] p-10 rounded-xl">
-                    <form  className="card-body">
+                    <form onSubmit={handleBookService}  className="card-body">
                         <div className="grid lg:grid-cols-2 gap-4">
                             <div className="form-control">
                                 <label className="label">
@@ -57,7 +72,7 @@ const BookService = () => {
                                 <input
                                     type="text"
                                     defaultValue={title}
-                                    name="name"
+                                    name="serviceName"
                                     className="input input-bordered"
                                     required
                                 />
@@ -108,6 +123,7 @@ const BookService = () => {
                                placeholder="Your message (optional)"
                                className="p-5"
                                type='text-area'
+                               name="message"
                                ></textarea>
                             </div>
                         <div className="form-control mt-6">

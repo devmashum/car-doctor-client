@@ -71,7 +71,7 @@ message:message
           <label className="label">
        
           </label>
-          <input type="submit" className="btn btn-block bg-[#FF3811] text-white" required />
+          <input type="submit" className="btn btn-block bg-[#FF3811] hover:bg-slate-500 text-white" required />
         </div>
 
         

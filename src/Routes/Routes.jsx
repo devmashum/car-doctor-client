@@ -10,7 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import Contact from "../Pages/Contact/Contact";
 import Shop from "../Pages/Shop/Shop";
 import MyCart from "../Pages/MyCart/MyCart";
-import Services from "../Pages/Home/Services";
+import ServicesPage from "../Pages/ServicesPage/ServicesPage";
 
 
 const router = createBrowserRouter([
@@ -54,7 +54,7 @@ element:<Shop></Shop>
             },
             {
                 path:'/services',
-                element: <Services></Services>
+                element: <ServicesPage></ServicesPage>
             }
 
         ]

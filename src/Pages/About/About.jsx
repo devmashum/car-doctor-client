@@ -1,5 +1,6 @@
 import person from '../../assets/images/about_us/person.jpg'
 import parts from '../../assets/images/about_us/parts.jpg'
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -20,7 +21,7 @@ const About = () => {
               
 
                 <div className="card-actions justify-start mt-5">
-                <button className="btn bg-[#FF3811] text-white">GET MORE INFO</button>
+               <Link to={'/contact'}> <button className="btn bg-[#FF3811] hover:bg-slate-500 text-white">GET MORE INFO</button></Link>
                 </div>
             </div>
         </div>
