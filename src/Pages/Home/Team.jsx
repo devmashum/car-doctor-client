@@ -10,10 +10,10 @@ import { SiAdguard } from "react-icons/si";
 const Team = () => {
     return (
         <div className=''>
-        <div className='lg:text-center lg:ml-0 ml-10 mt-[30px] lg:mt-[80px]'>
-        <p className='text-[#FF3811] text-xl font-bold mt-5 '>Meet Our Team</p>
+        <div className='lg:text-center lg:ml-0 mx-10 mt-[30px] lg:mt-[80px]'>
+        <p className='text-[#FF3811] text-xl font-bold mt-5 '>Our Team</p>
         <h3 className="lg:text-[45px] text-2xl text-[#151515] font-bold my-3">Meet Our Team</h3>
-        <p className='text-[16px] text-[#737373] mb-[50px]'>
+        <p className='text-[16px] text-justify mb-[50px]'>
         Our technicians are the backbone of our car service center. Trained in the latest automotive technologies and equipped with advanced diagnostic tools, they possess the skills needed to tackle a wide range of vehicle issues. From routine maintenance to complex repairs, our technicians approach every task with precision and a commitment to quality.
         </p>
 
@@ -60,7 +60,7 @@ const Team = () => {
        <div className='lg:text-center lg:ml-10 mt-[30px] lg:mt-[80px]'>
         <p className='text-[#FF3811] text-xl font-bold mt-5 ml-10'>Core Features</p>
         <h3 className="lg:text-[45px] text-2xl text-[#151515] font-bold my-3 ml-10">Why Choose Us</h3>
-        <p className='text-[16px] text-[#737373] mb-[50px] ml-10'>
+        <p className='text-[16px]  mb-[50px] mx-10 text-justify'>
         We understand the importance of clear and open communication. That's why we keep our clients informed every step of the way. From diagnostics to the final repair, you'll be in the loop, ensuring there are no surprises when you get back behind the wheel.
         </p>
         <div className=' w-11/12  mx-auto  lg:flex justify-center gap-16'>

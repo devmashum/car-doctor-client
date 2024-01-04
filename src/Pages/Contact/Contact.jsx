@@ -12,9 +12,6 @@ const Contact = () => {
     const name=form.name.value;
     const email=form.email.value;
     const message=form.message.value;
-
-    console.log(name, email, message);
-
     const contactData={
 name: name,
 email:email,
@@ -35,8 +32,6 @@ message:message
       console.log(error)
   })
 };
-
- 
 
     return (
         <div>
@@ -72,9 +67,7 @@ message:message
        
           </label>
           <input type="submit" className="btn btn-block bg-[#FF3811] hover:bg-slate-500 text-white" required />
-        </div>
-
-        
+        </div>       
      </form>
        </div>
         </div>

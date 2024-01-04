@@ -21,8 +21,8 @@ const Banner = () => {
       <h1 className=" text-4xl lg:ml-[100px] lg:text-5xl font-extrabold text-white leading-snug ">Affordable <br /> Price For Car Servicing</h1>
       <p className="lg:ml-[100px] text-[18px] text-white mt-[30px] lg:leading-none">There are many variations of passages of  available, but <span className='hidden lg:block'> <br /> </span> the majority have suffered alteration in some form</p>
     <div className='flex mt-[30px]'>
-    <Link to={'/shop'}><button className="btn lg:ml-[100px] bg-[#FF3811] hover:bg-slate-500 text-white">Shop</button></Link>
-      <Link to={'/services'}><button className="btn btn-outline text-white ml-[45px]">Our Services</button></Link>
+    <Link to={'/shop'}><button className="btn lg:ml-[100px] bg-[#FF3811] hover:bg-slate-500 text-white">Shop Now!</button></Link>
+      <Link to={'/services'}><button className="btn btn-outline text-white ml-3">Our Services</button></Link>
     </div>
     </div>
   </div>
@@ -36,21 +36,21 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full h-[600px]">
-                <img src={img2} className="w-full" />
+                <img src={img2} className="lg:w-full object-cover" />
                 <div className="absolute flex justify-end gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
                     <a href="#slide1" className="btn bg-[#FF3811] text-white btn-circle">❮</a>
                     <a href="#slide3" className="btn bg-[#FF3811] text-white btn-circle">❯</a>
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full h-[600px]">
-                <img src={img3} className="w-full" />
+                <img src={img3} className="lg:w-full  object-cover" />
                 <div className="absolute flex justify-end gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
                     <a href="#slide2" className="btn bg-[#FF3811] text-white btn-circle">❮</a>
                     <a href="#slide4" className="btn bg-[#FF3811] text-white btn-circle">❯</a>
                 </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full h-[600px]">
-                <img src={img4} className="w-full" />
+                <img src={img4} className="lg:w-full object-cover" />
                 <div className="absolute flex justify-end gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
                     <a href="#slide3" className="btn bg-[#FF3811] text-white btn-circle">❮</a>
                     <a href="#slide1" className="btn bg-[#FF3811] text-white btn-circle">❯</a>

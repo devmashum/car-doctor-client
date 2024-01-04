@@ -3,7 +3,6 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
-
 import BookService from "../Pages/BookService";
 import Bookings from "../Pages/Bookings/Bookings";
 import PrivateRoute from "./PrivateRoute";
@@ -34,7 +33,7 @@ const router = createBrowserRouter([
             {
                 path: '/book/:id',
                 element: <PrivateRoute><BookService></BookService></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:3000/services/${params.id}`),
+                loader: ({ params }) => fetch(`https://cardoctor-server-xi.vercel.app/services/${params.id}`),
             },
             {
                 path: '/bookings',

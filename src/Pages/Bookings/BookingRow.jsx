@@ -1,8 +1,6 @@
-import React from 'react';
 
 const BookingRow = ({ booking }) => {
     const { customerName, price, date, email, service, img, _id, status } = booking;
-
 
     return (
    

@@ -5,7 +5,6 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import useCart from '../../hooks/useCart';
 
-
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useCart();
@@ -29,14 +28,12 @@ const NavBar = () => {
           
         </> :
             <></>}
-                        <div className='mr-5 text-[18px] font-semibold lg:hidden'>
+
+                        <div className='mr-3 text-[18px] font-semibold lg:hidden'>
                 {
-                    user? <button onClick={handleLogOut}>Logout</button>: <Link to={'/login'}> <button>Login</button> </Link>
+                    user? <button className='btn btn-sm bg-[#FF3811] text-white' onClick={handleLogOut}>Logout</button>: <Link className='btn btn-sm bg-[#FF3811] text-white' to={'/login'}> <button>Login</button> </Link>
                 }
             </div>
-
-
-
     </>
 
     return (
@@ -66,9 +63,9 @@ const NavBar = () => {
             </div></Link>
          
             {
-                    user? <button className='mr-5 text-[18px] font-semibold lg:block hidden' onClick={handleLogOut}>Logout</button>: <Link className='text-[18px] font-semibold mr-5' to={'/login'}> <button>Login</button> </Link>
+                    user? <button className='mr-5 text-[18px] font-semibold lg:block hidden' onClick={handleLogOut}>Logout</button>: <Link className='text-[18px] lg:block hidden font-semibold mr-5' to={'/login'}> <button>Login</button> </Link>
                 }
-                <button className='btn btn-outline text-[18px] font-bold text-[#FF3811]'>Appoinment</button>
+              
             </div>
         </div>
     );

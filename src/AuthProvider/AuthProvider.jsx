@@ -18,14 +18,12 @@ const AuthProvider = ({ children }) => {
     const signIn = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
-
     }
 
     const logOut = () => {
         setLoading(true);
         return signOut(auth);
     }
-    // current userke dhore rakhe
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
@@ -44,7 +42,6 @@ const AuthProvider = ({ children }) => {
         createUser,
         signIn,
         logOut
-
     }
 
     return (

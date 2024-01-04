@@ -3,6 +3,7 @@ import useAxios from '../../hooks/useAxios';
 import useAuth from '../../hooks/useAuth';
 import useCart from '../../hooks/useCart';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const ShopCard = ({items}) => {
     const {img,name,price, details}=items;
@@ -46,7 +47,12 @@ const ShopCard = ({items}) => {
     <div className="card-actions">
 
 
-      <button onClick={()=>handleMyCart(items)} className="btn btn-block bg-[#FF3811] text-white hover:bg-slate-500">Buy Now</button>
+     {
+      user?  <button onClick={()=>handleMyCart(items)} className="btn btn-block bg-[#FF3811] text-white hover:bg-slate-500">Buy Now</button> :
+      <>
+<Link to={'/login'}><button onClick={()=>handleMyCart(items)} className="btn btn-block bg-[#FF3811] text-white hover:bg-slate-500">Buy Now</button></Link>
+      </>
+     }
     </div>
   </div>
 </div>

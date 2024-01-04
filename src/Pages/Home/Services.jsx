@@ -23,7 +23,7 @@ queryFn: async() => {
       <div className='lg:text-center'>
         <p className='text-[#FF3811] text-xl font-bold mt-5 ml-10 '>Service</p>
         <h3 className="lg:text-[45px] text-2xl text-[#151515] font-bold my-3 ml-10">Our Service Area</h3>
-        <p className='text-[16px] text-[#737373] mb-[50px] ml-10'>
+        <p className='text-[16px]  mb-[50px] mx-10 text-justify'>
           Keep your vehicle in peak condition with our routine maintenance services. From oil changes and fluid checks to tire rotations and brake inspections, our skilled technicians perform thorough assessments to prevent potential issues and extend the life of your vehicle.
         </p>
 
@@ -35,25 +35,25 @@ queryFn: async() => {
         ))}
       </div>
 
-   <div className='bg-[#151515] w-11/12 lg:py-20 py-10 mx-auto rounded-xl mt-20 lg:flex justify-center gap-16'>
+   <div className='bg-[#151515] w-11/12 lg:py-20 py-10 mx-auto rounded-xl mt-20 lg:flex justify-center item-center gap-16'>
    <div className='flex justify-center items-center gap-5 mb-10 lg:mb-0'>
-       <div className='text-6xl text-[#FF3811]'><SlCalender />
+       <div className='lg:text-6xl text-5xl text-[#FF3811]'><SlCalender />
        </div>
        <div>
         <p className='text-base text-white'>We are open monday-friday</p>
         <h3 className='text-2xl font-bold text-white'>7:00 am - 9:00 pm</h3>
        </div>
       </div>
-   <div className='flex justify-center items-center gap-5 mb-10 lg:mb-0'>
-       <div className='text-6xl text-[#FF3811]'><FaPhoneVolume />
+   <div className='flex justify-center items-center gap-5 mb-10 lg:mb-0 mr-5'>
+       <div className='lg:text-6xl text-5xl text-[#FF3811]'><FaPhoneVolume />
        </div>
        <div>
         <p className='text-base text-white'>Have a question?</p>
         <h3 className='text-2xl font-bold text-white'>+2546 251 2658</h3>
        </div>
       </div>
-   <div className='flex justify-center items-center gap-5'>
-       <div className='text-6xl text-[#FF3811]'><IoLocationOutline />
+   <div className='flex justify-center items-center gap-5 ml-5'>
+       <div className='lg:text-6xl text-5xl text-[#FF3811]'><IoLocationOutline />
        </div>
        <div>
         <p className='text-base text-white'>Need a repair? our address</p>

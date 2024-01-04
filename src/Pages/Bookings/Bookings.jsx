@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import BookingRow from './BookingRow';
-import axios from 'axios';
-import Swal from 'sweetalert2';
 import img from '../../assets/images/banner/3.jpg'
 import useAxios from '../../hooks/useAxios';
 import { useQuery } from '@tanstack/react-query';
@@ -18,7 +16,6 @@ const {data: bookings = []} = useQuery({
         return res.data;
     }
 });
-
 
     return (
         <div>
@@ -47,8 +44,6 @@ const {data: bookings = []} = useQuery({
                             bookings?.map(booking => <BookingRow key={booking._id} booking={booking}></BookingRow>)
                         }
                     </tbody>
-
-
                 </table>
             </div>
         </div>
