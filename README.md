@@ -1,5 +1,5 @@
-<a href='https://car-doctor-2b00a.web.app/' target='_blank'>Live</a>
-<a href='https://github.com/devmashum/car-doctor-client' target='_blank'>Client</a>
+<a href='https://car-doctor-2b00a.web.app/' target='_blank'>Live</a> <br/>
+<a href='https://github.com/devmashum/car-doctor-client' target='_blank'>Client</a> <br/>
 <a href='https://github.com/devmashum/carDoctor-server' target='_blank'>Server</a>
 
 <div class='p-5'>
