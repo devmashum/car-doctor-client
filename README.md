@@ -1,6 +1,6 @@
-<a href='https://car-doctor-2b00a.web.app/' target='_blank'>Live</a> <br/>
-<a href='https://github.com/devmashum/car-doctor-client' target='_blank'>Client</a> <br/>
-<a href='https://github.com/devmashum/carDoctor-server' target='_blank'>Server</a>
+<a href='https://car-doctor-2b00a.web.app/' target='_blank'>Live Link</a> <br/>
+<a href='https://github.com/devmashum/car-doctor-client' target='_blank'>Client Link</a> <br/>
+<a href='https://github.com/devmashum/carDoctor-server' target='_blank'>Server Link</a>
 
 <div class='p-5'>
   <div class='flex gap-3'>
